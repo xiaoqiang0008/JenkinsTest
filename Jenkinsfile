@@ -5,6 +5,11 @@ pipeline {
     }
 
   }
+  
+  tool{
+    'maven' 'maven 3.6.3'
+  }
+  
   stages {
     stage('pull') {
       steps {
@@ -15,7 +20,7 @@ pipeline {
     stage('build') {
       steps {
         sh 'mvn clean install'
-        tool(name: 'maven', type: 'maven 3.6.3')
+        
       }
     }
 
