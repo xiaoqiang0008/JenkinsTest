@@ -14,6 +14,8 @@ public class TestController {
     @RequestMapping(value = "/getInfo", method = RequestMethod.GET)
     @ResponseBody
     public String  getInfo(){
+        String fileName = "fileInfo.txt";
+
         return "success";
     }
 }
